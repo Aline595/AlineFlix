@@ -14,7 +14,9 @@
 
 ## Como executar
 
-Fazer o clone deste repositorio  
+Fazer o clone deste repositorio 
+
+adicionar as dependencias com o comendo yarn install
 
 executar yarn start no terminal e abrir no navegador http://localhost:3000  
 
