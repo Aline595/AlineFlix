@@ -29,7 +29,6 @@ function CadastroCategoria() {
     );
   }
 
-  // ============
 
   useEffect(() => {
       const URL_TOP = 'https://localhost:8080/categorias'; 
