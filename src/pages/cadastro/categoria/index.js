@@ -107,7 +107,7 @@ function CadastroCategoria() {
         Ir para home
       </Link>
     </PageDefault>
-  )
+  );
 }
 
 export default CadastroCategoria;

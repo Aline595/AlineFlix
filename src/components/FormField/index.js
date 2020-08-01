@@ -4,9 +4,11 @@ import styled, { css } from 'styled-components';
 
 const FormFieldWrapper = styled.div`
   position: relative;
+
   textarea {
     min-height: 150px;
   }
+
   input[type="color"] {
     padding-left: 56px;
   }
@@ -61,18 +63,16 @@ const Input = styled.input`
   }
 
   ${({hasValue}) =>  hasValue && css`
-      &:not([type='color']) + span {
-        transform: scale(.6) translateY(-10px);
-      }
-    `}
-  }
-  
-}
+    &:not([type='color']) + span {
+      transform: scale(.6) translateY(-10px);
+    }
+  `}
 `;
 
 function FormField({
   label, type, name, value, onChange,
 }) {
+  const fieldId = `id_${name}`;
   const isTypeTextArea = type === 'textarea';
   const tag = isTypeTextArea ? 'textarea' : 'input';
 
@@ -84,6 +84,7 @@ function FormField({
         <Input
           as={tag}
           type={type}
+          id={fieldId}
           value={value}
           name={name}
           hasValue = {hasValue}
